@@ -1,5 +1,13 @@
 <?php 
-require 'PHPMailerAutoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+require 'POP3.php';
 require 'form_setting.php';
 
 if(isset($_POST)){
@@ -15,6 +23,13 @@ if(isset($_POST)){
 	$messages .= "</ul> \r\n";
 
 	$mail = new PHPMailer;
+
+	$mail->isSMTP();
+	$mail->Host = 'smtp.gmail.com';
+	$mail->Port = 587;
+	$mail->SMTPAuth = true;
+	$mail->Username = 'hisalsamarrai24@gmail.com';
+	$mail->Password = 'Hisham66';
 
 	$mail->From = $from;
 	$mail->FromName = $fromName;
