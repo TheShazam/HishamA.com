@@ -702,7 +702,7 @@ animate();
 		submitHandler: function() {
 			$.ajax({
 				url: 'https://formspree.io/mayorwly',
-				type: 'post',
+				type: 'POST',
 				dataType: 'json',
 				data: 'name='+ $("#cform").find('input[name="name"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
 				beforeSend: function() {
