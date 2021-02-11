@@ -27,8 +27,6 @@ function init() {
         vertex.y = 5000 * Math.random() - 2500;
         vertex.z = 5000 * Math.random() - 2500;
 
-        geometry.vertices.push( vertex );
-
     }
 
     material = new THREE.PointsMaterial( { size: 5, sizeAttenuation: false, alphaTest: 0.5, transparent: true } );
